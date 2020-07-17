@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Montserrat_bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Devonshire";
+  src: url("../fonts/Devonshire-FontZillion/devonshire-regular.ttf");
+}
+@font-face {
+  font-family: "Croissant";
+  src: url("../fonts/Croissant-One-FontZillion/croissantone-regular.ttf");
+}
+@font-face {
+  font-family: "Dancing";
+  src: url("../fonts/Dancing-Script/dancing-script-regular.ttf");
+}
+@font-face {
+  font-family: "Kaushan";
+  src: url("../fonts/Kaushan-Script-FontZillion/kaushanscript-regular.ttf");
+}
+@font-face {
+  font-family: "Segoe";
+  src: url("../fonts/Segoe-print/SegoePrint.ttf");
+}
+@font-face {
+  font-family: "Tex";
+  src: url("../fonts/TeXGyreSchola-FontZillion/texgyreschola-regular.otf");
+}
+article h3 {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: 1em;
+}
+
+body {
+  margin: 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+}
+@media all and (max-width: 991px) {
+  body {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width: 767px) {
+  body {
+    font-size: 0.5em;
+  }
+}
+
+header {
+  font-family: "Montserrat_bold";
+  font-size: 1.2em;
+  text-align: center;
+  background-color: #579c87;
+  color: #fdcb46;
+}
+
+.Menu {
+  margin: 3em 10em 6em 10em;
+  box-shadow: 0em 0em 0.7em #c8c8c8;
+  font-family: "Segoe";
+  background-color: #fcdfdb;
+  color: #3c1218;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+@media all and (max-width: 991px) {
+  .Menu {
+    margin: 3em 5em 6em 5em;
+  }
+}
+@media all and (max-width: 767px) {
+  .Menu {
+    margin: 1em 2em 5em 2em;
+  }
+}
+.Menu__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Devonshire";
+  text-align: center;
+  font-size: 3em;
+  font-weight: normal;
+}
+.Menu__header p {
+  margin: 0em;
+  padding: 0em;
+}
+.Menu__header__img {
+  max-width: 30%;
+  align-self: center;
+}
+.Menu__carte {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Menu__carte__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
+.Menu__carte__title__img-tiret {
+  max-width: 30%;
+  align-self: center;
+}
+.Menu__carte__title__text {
+  display: flex;
+  flex-direction: column;
+}
+.Menu__carte__title__text:hover .Menu__carte__title__text__underline {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.Menu__carte__title__text__underline {
+  width: 100%;
+  height: 3px;
+  background-color: #3c1218;
+  transform: scaleX(0);
+  opacity: 0;
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 30%;
+}
+@media all and (max-width: 991px) {
+  .Menu__carte__title__text__underline {
+    height: 2px;
+  }
+}
+.Menu__carte__choix__ligne {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media all and (max-width: 991px) {
+  .Menu__carte__choix__ligne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .Menu__carte__choix__ligne p {
+    margin: 0;
+  }
+}
+
+span {
+  font-weight: bold;
+  padding-left: 1em;
+}
+@media all and (max-width: 991px) {
+  span {
+    padding-left: 0em;
+  }
+}
+@media all and (max-width: 767px) {
+  span {
+    padding-left: 0em;
+  }
+}
+
+.logo-bas {
+  font-family: "Devonshire";
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 1.5em;
+}
+.logo-bas__img {
+  max-width: 10%;
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+footer {
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #579c87;
+  color: #fdcb46;
+  height: 3em;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+footer div {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+footer div:hover {
+  animation: wriggle 0.4s alternate infinite;
+}
+
+@keyframes wriggle {
+  0% {
+    transform: translateX(1%) translateY(-2%) rotate(2deg);
+  }
+  33% {
+    transform: translateX(-1%) translateY(2%) rotate(-2deg);
+  }
+  66% {
+    transform: translateX(1%) translateY(2%) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-1%) translateY(-2%) rotate(-2deg);
+  }
+}
+
+/*# sourceMappingURL=style-note.css.map */
