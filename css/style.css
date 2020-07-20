@@ -371,7 +371,7 @@ span {
   align-items: center;
 }
 .section-menus__tile a:hover .section-menus__tile__title, .section-menus__tile a:hover .section-menus__tile__menu {
-  transform: scale(1.4);
+  transform: scale(1.2);
   opacity: 0.4;
 }
 .section-menus__tile--1 {
