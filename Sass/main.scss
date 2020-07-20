@@ -1,21 +1,7 @@
 
 @import "_base.scss";
-
-body {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-header {
-    font-family: "Montserrat_bold";
-    font-size: 1.2em;
-    text-align: center;
-    background-color: rgb(87,156,135);
-    color: rgb(253,203,70);
-}
+@import "_utils.scss";
+@import "_layouts.scss";
 
 .section-menus {
     display: flex;
@@ -25,6 +11,18 @@ header {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     width: 55em;
+    @include medium-screen {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    @include small-screen {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
     &__tile {
         display: flex;
         flex-direction: column;
@@ -32,7 +30,7 @@ header {
         align-items: center;
         width: 20em;
         height: 25em;
-        box-shadow: 0em 0em 0.7em rgb(200,200,200);
+        box-shadow: $box-shadow-values;
         margin-top: 2.5em; 
         font-size: 1.2em;
         & a {
@@ -51,26 +49,8 @@ header {
             } 
         }
         
-        &--note {
-            font-family: "Devonshire";
-            background-color: rgb(252, 223, 219);
-            color: rgb(60, 18, 24);
-            }
-        &--chic {
-            font-family: "Croissant";
-            background-color: rgb(255, 245, 254);
-            color: rgb(199, 116, 18);
-        }
-        &--delice {
-            font-family: "Dancing";
-            background-color: rgb(249, 249, 249);
-            color: rgb(8, 135, 251);
-        }
-        &--palette {
-            font-family: "Kaushan";
-            background-color: rgb(253, 255, 253);
-            color: rgb(121, 196, 92);
-        }
+        @include Layout-menu-home-tile;
+
         &__title {
             transform: scale(1);
             opacity:1;
@@ -81,22 +61,20 @@ header {
                     width: 40%;
                     align-self: center;
                 }
-            &--note {
+            @include Layout-menu-header;
+            &--1 {
                 font-size: 1.6em;
                 display: flex;
                 flex-direction: column;
             }
-            &--chic {
+            &--2 {
                 font-size: 1.2em;
-                @include title-chic;
             }
-            &--delice {
+            &--3 {
                 font-size: 1.8em;
-                @include title-delice;
             }
-            &--palette {
+            &--4 {
                 font-size: 1.8em;
-                @include title-palette;
             }
         }
         &__menu {
@@ -135,8 +113,8 @@ a {
     margin-bottom: 6em;
     &__content {
         padding: 0.5em 4em 0.5em 4em;
-        background-color: rgb(87,156,135);
-        color: rgb(253,203,70);
+        background-color: $bg-color-site;
+        color: $txt-color-site;
         border-radius: 10px;
         font-size: 1.5em;
         display: flex;
@@ -147,7 +125,7 @@ a {
     &__dots {
         height: 0.5em;
         width: 0.5em;
-        background-color: rgb(253,203,70);
+        background-color: $txt-color-site;
         border-radius: 50%;
         margin: 0.2em;
         animation: jump 0.5s ease-in-out alternate infinite backwards;
@@ -159,63 +137,5 @@ a {
         &--1 {
             margin-left: 0.7em;
         }
-    }
-}
-
-
-footer {
-    font-family: "Montserrat";
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(87,156,135);
-    color: rgb(253,203,70);
-    height: 3em;
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    & div {
-        padding-right: 2em;
-        padding-left: 2em;
-        &:hover {
-            animation: wriggle 0.4s alternate infinite; 
-        }    
-    }
-}
-
-@keyframes wriggle {
-    0% {
-        transform: translateX($wriggle-power) translateY($wriggle-power*-2) rotate($wriggle-rotation);
-    }
-    33% {
-        transform: translateX($wriggle-power*-1) translateY($wriggle-power*2) rotate($wriggle-rotation*-1);
-    }
-    66% {
-        transform: translateX($wriggle-power) translateY($wriggle-power*2) rotate($wriggle-rotation);
-    }
-    100% {
-        transform: translateX($wriggle-power*-1) translateY($wriggle-power*-2) rotate($wriggle-rotation*-1);
-    }
-}
-
-@keyframes jump {
-    from {
-        transform: translateY(50%);
-    }
-    
-    to {
-        transform: translateY($jump-height);
-    }
-    
-}
-
-@media all and (max-width: 991px) {
-
-    .section-menus {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        width: auto;
     }
 }

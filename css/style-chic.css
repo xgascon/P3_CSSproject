@@ -30,14 +30,30 @@
   font-family: "Tex";
   src: url("../fonts/TeXGyreSchola-FontZillion/texgyreschola-regular.otf");
 }
-article h3 {
-  margin-bottom: 0em;
-  margin-top: 0em;
-  font-size: 1em;
+@keyframes wriggle {
+  0% {
+    transform: translateX(1%) translateY(-2%) rotate(2deg);
+  }
+  33% {
+    transform: translateX(-1%) translateY(2%) rotate(-2deg);
+  }
+  66% {
+    transform: translateX(1%) translateY(2%) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-1%) translateY(-2%) rotate(-2deg);
+  }
 }
-
+@keyframes jump {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
 body {
-  margin: 0em;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,12 +78,30 @@ header {
   color: #fdcb46;
 }
 
+footer {
+  font-family: "Montserrat";
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #579c87;
+  color: #fdcb46;
+  height: 3em;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+footer div {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+footer div:hover {
+  animation: wriggle 0.4s alternate infinite;
+}
+
 .Menu {
   margin: 3em 10em 6em 10em;
   box-shadow: 0em 0em 0.7em #c8c8c8;
-  font-family: "Tex";
-  background-color: #fff5fe;
-  color: #e38913;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,39 +118,103 @@ header {
     margin: 1em 2em 5em 2em;
   }
 }
+.Menu--1 {
+  font-family: "Segoe";
+  background-color: #fcdfdb;
+}
+.Menu--2 {
+  font-family: "Tex";
+  background-color: #fff5fe;
+}
+.Menu--3 {
+  font-family: "Segoe";
+  background-color: #f9f9f9;
+}
+.Menu--4 {
+  font-family: "Segoe";
+  background-color: #fdfffd;
+}
 .Menu__header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Croissant";
-  background: linear-gradient(150deg, #e38913, #af6ca6, #8f5aff);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   text-align: center;
   font-size: 3em;
   font-weight: normal;
 }
+.Menu__header--1 {
+  font-family: "Devonshire";
+  background: linear-gradient(150deg, #3c1218, #3c1218, #3c1218);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.Menu__header--2 {
+  font-family: "Croissant";
+  background: linear-gradient(150deg, #e38913, #af6ca6, #8f5aff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.Menu__header--3 {
+  font-family: "Dancing";
+  background: linear-gradient(150deg, #0431df, #0670f3, #229df9);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.Menu__header--4 {
+  font-family: "Kaushan";
+  background: linear-gradient(150deg, #3d9339, #72bf56, #bfff7e);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 .Menu__header p {
   margin: 0em;
   padding: 0em;
-}
-.Menu__header__img {
-  max-width: 30%;
-  align-self: center;
 }
 .Menu__carte {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.Menu__carte--entree {
+.Menu__carte--1--entree {
+  color: #3c1218;
+}
+.Menu__carte--1--plat {
+  color: #3c1218;
+}
+.Menu__carte--1--dessert {
+  color: #3c1218;
+}
+.Menu__carte--2--entree {
   color: #e38913;
 }
-.Menu__carte--plat {
+.Menu__carte--2--plat {
   color: #af6ca6;
 }
-.Menu__carte--dessert {
+.Menu__carte--2--dessert {
   color: #8f5aff;
+}
+.Menu__carte--3--entree {
+  color: black;
+}
+.Menu__carte--3--plat {
+  color: black;
+}
+.Menu__carte--3--dessert {
+  color: black;
+}
+.Menu__carte--4--entree {
+  color: black;
+}
+.Menu__carte--4--plat {
+  color: black;
+}
+.Menu__carte--4--dessert {
+  color: black;
+}
+.Menu__carte h3 {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: 1em;
 }
 .Menu__carte__title {
   display: flex;
@@ -153,14 +251,41 @@ header {
     height: 2px;
   }
 }
-.Menu__carte__title__text__underline--entree {
-  background-color: #e38913;
+.Menu__carte__title__text__underline--1--entree {
+  background: #3c1218;
 }
-.Menu__carte__title__text__underline--plat {
-  background-color: #af6ca6;
+.Menu__carte__title__text__underline--1--plat {
+  background: #3c1218;
 }
-.Menu__carte__title__text__underline--dessert {
-  background-color: #8f5aff;
+.Menu__carte__title__text__underline--1--dessert {
+  background: #3c1218;
+}
+.Menu__carte__title__text__underline--2--entree {
+  background: #e38913;
+}
+.Menu__carte__title__text__underline--2--plat {
+  background: #af6ca6;
+}
+.Menu__carte__title__text__underline--2--dessert {
+  background: #8f5aff;
+}
+.Menu__carte__title__text__underline--3--entree {
+  background: #0431df;
+}
+.Menu__carte__title__text__underline--3--plat {
+  background: #0670f3;
+}
+.Menu__carte__title__text__underline--3--dessert {
+  background: #229df9;
+}
+.Menu__carte__title__text__underline--4--entree {
+  background: radial-gradient(#3d9339, #72bf56, #bfff7e);
+}
+.Menu__carte__title__text__underline--4--plat {
+  background: radial-gradient(#3d9339, #72bf56, #bfff7e);
+}
+.Menu__carte__title__text__underline--4--dessert {
+  background: radial-gradient(#3d9339, #72bf56, #bfff7e);
 }
 .Menu__carte__choix__ligne {
   font-size: 1.2em;
@@ -181,6 +306,11 @@ header {
   }
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 span {
   font-weight: bold;
   padding-left: 1em;
@@ -193,58 +323,6 @@ span {
 @media all and (max-width: 767px) {
   span {
     padding-left: 0em;
-  }
-}
-
-.logo-bas {
-  font-family: "Croissant";
-  text-align: center;
-  font-size: 2.5em;
-  margin-top: 1.5em;
-}
-.logo-bas__img {
-  max-width: 10%;
-  align-self: center;
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-footer {
-  font-family: "Montserrat";
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #579c87;
-  color: #fdcb46;
-  height: 3em;
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-}
-footer div {
-  padding-right: 2em;
-  padding-left: 2em;
-}
-footer div:hover {
-  animation: wriggle 0.4s alternate infinite;
-}
-
-@keyframes wriggle {
-  0% {
-    transform: translateX(1%) translateY(-2%) rotate(2deg);
-  }
-  33% {
-    transform: translateX(-1%) translateY(2%) rotate(-2deg);
-  }
-  66% {
-    transform: translateX(1%) translateY(2%) rotate(2deg);
-  }
-  100% {
-    transform: translateX(-1%) translateY(-2%) rotate(-2deg);
   }
 }
 

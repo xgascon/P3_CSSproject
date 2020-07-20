@@ -1,0 +1,156 @@
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include font-values(large-screen);
+    @include medium-screen {
+        @include font-values(medium-screen);
+    }
+    @include small-screen {
+        @include font-values(small-screen);
+    }
+}
+
+header {
+    font-family: "Montserrat_bold";
+    font-size: 1.2em;
+    text-align: center;
+    background-color: $bg-color-site;
+    color: $txt-color-site;
+}
+
+footer {
+    font-family: "Montserrat";
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bg-color-site;
+    color: $txt-color-site;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    & div {
+        padding-right: 2em;
+        padding-left: 2em;
+        &:hover {
+            animation: wriggle 0.4s alternate infinite; 
+        }    
+    }
+}
+
+.Menu {
+    @include margin-values(large-screen);
+    @include medium-screen {
+        @include margin-values(medium-screen);
+    }
+    @include small-screen {
+        @include margin-values(small-screen);
+    }
+    box-shadow: $box-shadow-values;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    @include Layout-menu;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 3em;
+        font-weight: normal;
+        @include Layout-menu-header;
+        & p {
+            margin: 0em;
+            padding:0em;
+        }
+    }
+    &__carte {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include Layout-menu-dish;
+        h3 {
+            margin-bottom: 0em;
+            margin-top: 0em;
+            font-size: 1em;
+        }
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.8em;
+            text-align: center;
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+            &__img-tiret {
+                max-width: 30%;
+                align-self: center;
+            }
+            &__text {
+                display: flex;
+                flex-direction: column;
+                &:hover {
+                    .Menu__carte__title__text__underline {
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                }
+                
+                &__underline {
+                    width: 100%;
+                    height: 3px;
+                    @include medium-screen {
+                        height:2px;
+                    }
+                    transform: scaleX(0);
+                    opacity: 0;
+                    transform-origin: left;
+                    transition: transform 0.4s ease-in-out;
+                    border-radius: 30%;
+                    @include Layout-underline;
+                }
+            }
+        }
+        &__choix__ligne {
+            font-size: 1.2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include medium-screen {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 1em;
+                & p {
+                    margin: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+
+a {
+    text-decoration: none; 
+    color: currentColor;   
+}
+
+
+span {
+    font-weight: bold;
+    padding-left: 1em;
+    @include medium-screen {
+        padding-left:0em;
+    }
+    @include small-screen {
+        padding-left:0em;
+    }
+}

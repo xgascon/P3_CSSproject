@@ -326,4 +326,13 @@ span {
   }
 }
 
-/*# sourceMappingURL=style-delice.css.map */
+.Menu {
+  font-family: "Montserrat";
+  align-items: unset;
+  text-align: justify;
+}
+.Menu h2, .Menu h3 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style-mentionslegales.css.map */
