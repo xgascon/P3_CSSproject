@@ -162,9 +162,10 @@ footer div:hover {
 }
 .Menu__header--4 {
   font-family: "Kaushan";
-  background: linear-gradient(150deg, #3d9339, #72bf56, #bfff7e);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+/*   background: linear-gradient(150deg, #3d9339, #72bf56, #bfff7e); */
+/*   -webkit-text-fill-color: transparent; */
+/*   -webkit-background-clip: text; */
+  background: #3d9339;
 }
 .Menu__header p {
   margin: 0em;
