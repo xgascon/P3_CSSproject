@@ -166,6 +166,7 @@ footer div:hover {
 /*   -webkit-text-fill-color: transparent; */
 /*   -webkit-background-clip: text; */
   background: #3d9339;
+  color: white;
 }
 .Menu__header p {
   margin: 0em;
