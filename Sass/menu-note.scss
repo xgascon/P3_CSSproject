@@ -14,7 +14,9 @@
 .logo-bas {
     $Layout: map-get($Layout-menu-all, 1);
     font-family: map-get($Layout, font-menu);
-    color: map-get($Layout, title-color);
+    background:map-get($Layout, title-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     text-align: center;
     font-size: 2.5em;
     margin-top: 1.5em;

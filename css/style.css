@@ -361,6 +361,7 @@ span {
   box-shadow: 0em 0em 0.7em #c8c8c8;
   margin-top: 2.5em;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .section-menus__tile a {
   height: 100%;
@@ -369,10 +370,14 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.section-menus__tile a:hover {
+  opacity: 0.4;
 }
 .section-menus__tile a:hover .section-menus__tile__title, .section-menus__tile a:hover .section-menus__tile__menu {
-  transform: scale(1.2);
-  opacity: 0.4;
+  transform: scale(1.3);
 }
 .section-menus__tile--1 {
   font-family: "Devonshire";
@@ -396,8 +401,7 @@ span {
 }
 .section-menus__tile__title {
   transform: scale(1);
-  opacity: 1;
-  transition: all 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
   font-size: 1.5em;
   text-align: center;
 }

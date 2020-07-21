@@ -333,7 +333,9 @@ span {
 
 .logo-bas {
   font-family: "Devonshire";
-  color: linear-gradient(150deg, #3c1218, #3c1218, #3c1218);
+  background: linear-gradient(150deg, #3c1218, #3c1218, #3c1218);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   text-align: center;
   font-size: 2.5em;
   margin-top: 1.5em;
