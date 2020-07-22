@@ -436,7 +436,7 @@ span {
 .section-menus__tile__title--1 {
   font-size: 1.6em;
   display: flex;
-  -webkit-flex-direction: column;
+/*   -webkit-flex-direction: column; */
 }
 .section-menus__tile__title--2 {
   font-size: 1.2em;
