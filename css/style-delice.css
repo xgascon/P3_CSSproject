@@ -135,9 +135,6 @@ footer div:hover {
   background-color: #fdfffd;
 }
 .Menu__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   font-size: 3em;
   font-weight: normal;

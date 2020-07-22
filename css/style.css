@@ -135,9 +135,6 @@ footer div:hover {
   background-color: #fdfffd;
 }
 .Menu__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   font-size: 3em;
   font-weight: normal;
@@ -406,7 +403,7 @@ span {
   text-align: center;
 }
 .section-menus__tile__title__img-note {
-  width: 40%;
+  width: 20%;
   align-self: center;
 }
 .section-menus__tile__title--1 {
@@ -435,8 +432,7 @@ span {
 }
 .section-menus__tile__title--1 {
   font-size: 1.6em;
-  display: flex;
-/*   -webkit-flex-direction: column; */
+  margin-top: 0.5em;
 }
 .section-menus__tile__title--2 {
   font-size: 1.2em;

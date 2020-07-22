@@ -135,9 +135,6 @@ footer div:hover {
   background-color: #fdfffd;
 }
 .Menu__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   font-size: 3em;
   font-weight: normal;
@@ -327,8 +324,12 @@ span {
 }
 
 .Menu__header__img {
-  max-width: 30%;
+  max-width: 10%;
   align-self: center;
+}
+.Menu__header--1 {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
 }
 
 .logo-bas {

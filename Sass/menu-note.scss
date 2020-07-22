@@ -5,8 +5,12 @@
 .Menu {    
     &__header {
         &__img {
-            max-width: 30%;
+            max-width: 10%;
             align-self: center;
+        }
+        &--1 {
+            margin-top: 0.5em;
+            margin-bottom: 0em;
         }
     }
 }

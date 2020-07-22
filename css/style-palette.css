@@ -135,9 +135,6 @@ footer div:hover {
   background-color: #fdfffd;
 }
 .Menu__header {
-  display: flex;
-/*   flex-direction: column;
-  justify-content: center; */
   text-align: center;
   font-size: 3em;
   font-weight: normal;
@@ -164,8 +161,7 @@ footer div:hover {
   font-family: "Kaushan";
   background: linear-gradient(150deg, #3d9339, #72bf56, #bfff7e);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text; 
-}
+  -webkit-background-clip: text;
 }
 .Menu__header p {
   margin: 0em;
