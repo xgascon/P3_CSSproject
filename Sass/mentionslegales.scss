@@ -1,12 +1,4 @@
 @import "_base.scss";
 @import "_utils.scss";
 @import "_layouts.scss";
-
-.Menu {
-    font-family: "Montserrat";
-    align-items: unset;
-    text-align: justify;
-    & h2, h3 {
-        text-align: center;
-    }
-}
+@import "_pages.scss";
