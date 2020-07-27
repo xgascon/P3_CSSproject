@@ -62,10 +62,6 @@ footer {
         font-size: 3em;
         font-weight: normal;
         @include Layout-menu-header;
-        & p {
-            margin: 0em;
-            padding:0em;
-        }
     }
     &__carte {
         display: flex;

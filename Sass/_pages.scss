@@ -59,9 +59,9 @@
             font-size: 1.5em;
             text-align: center;
             &__img-note {
-                    width: 20%;
-                    align-self: center;
-                }
+                height: 3em;
+                align-self: center;
+            }
             @include Layout-menu-header;
             &--1 {
                 font-size: 1.6em;
@@ -149,7 +149,7 @@
 .Menu {    
     &__header {
         &__img {
-            width:10%;
+            height:2em;
             align-self: center;
         }
         &--1 {

@@ -163,10 +163,6 @@ footer div:hover {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.Menu__header p {
-  margin: 0em;
-  padding: 0em;
-}
 .Menu__carte {
   display: flex;
   flex-direction: column;
@@ -403,7 +399,7 @@ span {
   text-align: center;
 }
 .section-menus__tile__title__img-note {
-  width: 20%;
+  height: 3em;
   align-self: center;
 }
 .section-menus__tile__title--1 {
@@ -507,7 +503,7 @@ span {
 }
 
 .Menu__header__img {
-  width: 10%;
+  height: 2em;
   align-self: center;
 }
 .Menu__header--1 {
